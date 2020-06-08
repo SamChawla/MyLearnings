@@ -1,0 +1,22 @@
+# Check docker images available
+$ docker images
+
+# Running docker image
+$ docker run <image-name>
+e.g docker run hello-world
+
+# Terminal Interactive run
+$ docker run -ti ubuntu:latest bash
+
+# Running Dockers
+$ docker ps
+$ docker ps -a (For containers including the stopped ones)
+
+# Creating an image from another image
+$ docker commit <imageID> (Returns sha256 code)
+$ docker tag <sha256 code> <new-image-name>
+
+or
+
+$ docker commit <imageID> <new-image-ID>
+
