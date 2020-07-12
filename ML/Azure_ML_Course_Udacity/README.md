@@ -1,29 +1,49 @@
-# Learnings from **"Microsoft Scholarship Foundation course Nanodegree Program"**
+# Learnings from **"[Microsoft Scholarship Foundation course Nanodegree Program](https://sites.google.com/udacity.com/microsoftazurechallenge)"**
 
-## Topics Covered
+**Note**: Use (Ctrl+click) to open link in a new tab
 
-- [What machine learning is and why it's so important in today's world](#what-is-machine-learning)
-- The historical context of machine learning
-- The data science process
-- The types of data that machine learning deals with
-- The two main perspectives in ML: the statistical perspective and the computer science perspective
-- The essential tools needed for designing and training machine learning models
-- The basics of Azure ML
-- The distinction between models and algorithms
-- The basics of a linear regression model
-- The distinction between parametric vs. non-parametric functions
-- The distinction between classical machine learning vs. deep learning
-- The main approaches to machine learning
-- The trade-offs that come up when making decisions about how to design and training machine learning models
+***
 
-## What is Machine Learning?
+## Lesson 1 - Welcome to Introduction to Machine Learning
 
-Machine learning is a data science technique used to extract patterns from data, allowing computers to identify related data, and forecast future outcomes, behaviors, and trends.
+## Lesson 2 - [Introduction to machine learning](L2_Intro_Machine_Learning/README.md)
 
-![Traditional programming v/s Machine Learning](https://user-images.githubusercontent.com/7588716/87047646-6653e800-c218-11ea-9009-c6c1cc89f35a.png)
+## Lesson 3 - [Model Training](L3_Model_Training/README.md)
 
-## Applications of Machine Learning
+## Lesson 4 - [Supervised & Unsupervised Learning](L4_Supervised_Unsupervised_Learning/README.md)
 
-The applications of machine learning are extremely broad! And the opportunities cut across industry verticals. Whether the industry is healthcare, finance, manufacturing, retail, government, or education, there is enormous potential to apply machine learning to solve problems in more efficient and impactful ways.
+## Lesson 5 - [Applications of Machine Learning](L5_Applications_Machine_Learning/README.md)
 
-<img alt="ML Application" src="https://user-images.githubusercontent.com/7588716/87048715-b41d2000-c219-11ea-9b25-8c34d5e53846.png" width="650">
+## Lesson 6 - [Managed Services for Machine Learning](L6_Managed_Services_Machine_Learning/README.md)
+
+## Lesson 7 - [Responsible AI](L7_Responsible_AI/README.md)
+
+## Lesson 8 - Course Conclusion
+
+***
+
+## OTHER LEARNING RESOURCES (Updated Regularly)
+
+### ONLINE COURSES
+
+- [Cognitive Classes by IBM](https://cognitiveclass.ai/)
+
+### BOOKS
+
+
+### READING MATERIALS
+
+
+### CHEAT SHEETS
+
+- [ML CheatSheet](Resources/MLCheatSheet.pdf)
+- [Pandas CheatSheet](Resources/pandas-cheat-sheet-fixed.pdf)
+- [Ultimate CheatSheet](Resources/Ultimate_Cheat_sheet_DS_ML_RL_DE.pdf)
+
+### OTHER RESOURCES
+
+***
+
+**Want to Contribute to this Repo?**
+
+Check [this](https://akrabat.com/the-beginners-guide-to-contributing-to-a-github-project/) article to understand [How to contibute to an open Repo](https://akrabat.com/the-beginners-guide-to-contributing-to-a-github-project/).
