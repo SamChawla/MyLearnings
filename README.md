@@ -4,7 +4,7 @@ Note: **(Use Crtl+click to open link in a new Tab)**
 
 ***
 
-## [Software Engineering Practices](SEP/README.md)
+## [Software Engineering Practices](SoftwareEngineeringPractices/README.md)
 
 ## [Docker](DOCKER/README.md)
 
