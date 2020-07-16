@@ -6,17 +6,17 @@
 
 ## Lesson 1 - Welcome to Introduction to Machine Learning
 
-## Lesson 2 - [Introduction to machine learning](L2_Intro_Machine_Learning/README.md)
+## Lesson 2 - [Introduction to machine learning](L2_Intro_Machine_Learning/README.md) (In-Progress)
 
-## Lesson 3 - [Model Training](L3_Model_Training/README.md)
+## Lesson 3 - [Model Training](L3_Model_Training/README.md) (Not Started)
 
-## Lesson 4 - [Supervised & Unsupervised Learning](L4_Supervised_Unsupervised_Learning/README.md)
+## Lesson 4 - [Supervised & Unsupervised Learning](L4_Supervised_Unsupervised_Learning/README.md) (Not Started)
 
-## Lesson 5 - [Applications of Machine Learning](L5_Applications_Machine_Learning/README.md)
+## Lesson 5 - [Applications of Machine Learning](L5_Applications_Machine_Learning/README.md) (Not Started)
 
-## Lesson 6 - [Managed Services for Machine Learning](L6_Managed_Services_Machine_Learning/README.md)
+## Lesson 6 - [Managed Services for Machine Learning](L6_Managed_Services_Machine_Learning/README.md) (Not Started)
 
-## Lesson 7 - [Responsible AI](L7_Responsible_AI/README.md)
+## Lesson 7 - [Responsible AI](L7_Responsible_AI/README.md) (Not Started)
 
 ## Lesson 8 - Course Conclusion
 
