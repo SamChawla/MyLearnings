@@ -5,6 +5,9 @@
   - [How Traditional Programming is different from Machine Learning?](#how-traditional-programming-is-different-from-machine-learning)
   - [Applications of Machine Learning](#applications-of-machine-learning)
   - [The historical context of machine learning](#the-historical-context-of-machine-learning)
+  - [The Data Science Process](#the-data-science-process)
+    - [The OSEMN Framework](#the-osemn-framework)
+  - [Common Types of Data](#common-types-of-data)
 
 ***
 
@@ -59,3 +62,38 @@ Further Reading: [What’s the Difference Between Artificial Intelligence, Machi
 
 ***
 
+## The Data Science Process
+
+<img alt="Data Science Process" src="https://user-images.githubusercontent.com/7588716/87878538-79c63680-ca02-11ea-9e91-513a632bcde6.png" width="650">
+
+1. *Data Collection* : This involves collection the data from various sources and handling the amount of data.
+2. *Data Preparation* : In this step, the relevant features affecting the end result are marked and kept for further research and the rest are either standardized or removed, based on the requirement. Data wrangling is a part of this process.
+3. *Model Training* : This step usually involves selecting an algorithm based on data and usecase. Then dividing the data into Training , Testing, and Validation(Optional) sets for further process.
+4. *Model Evaluation* : At this stage, we run the model on the validation set of the input data to assert its accuracy, precision and so on.
+5. *Model Deployment* : This is usually the last step - the best model is used based on different parameters such as accuracy, precision and recall and is deployed on some web service, API etc.
+6. *Re-training* : When we get new data, we might need to re-train the model to get the model adjusted with the new data or in between training and deployment, we re-train the model several times to get the best parameters for the final model.
+
+### The OSEMN Framework
+
+<img alt="Data Science Process" src="https://user-images.githubusercontent.com/7588716/87878582-b5610080-ca02-11ea-9d2e-7e49a88f06e8.png" width="650">
+
+Further Reading: [5 Steps of a data science project](https://towardsdatascience.com/5-steps-of-a-data-science-project-lifecycle-26c50372b492)
+
+***
+
+## Common Types of Data
+
+In Data Science, we deal with different types of data. Here are the few types of data that we deal with:
+
+- *Numerical* - **It's All Numerical in the End**. This involves integer or float data.
+
+- *Time-Series* - Evenly spaced data in different points of time or simply data that contains datetime values in it. It is a series of numerical data which can be arranged in an order.e.g - Population data over the years, stock market data.
+
+- *Categorical* - This type of data if of mainly some specific categories in which the entire dataset is divided into - generally has low cardinality but this type of data requires a very high efficiency while handling it.e.g gender.
+
+- *Text* - This type of data comprises words, sentences, articles etc and it is a challenge to get these converted into a machine understandable form. We use NLP to handle text data.
+
+- *Image* - Image frames from video stream or simply the entire video stream - again the same problem of converting these into numerical form to make some sense out of it.
+
+**All data in machine learning eventually ends up being numerical, regardless of whether it is numerical in its original form, so it can be processed by machine learning algorithms.**
+***
