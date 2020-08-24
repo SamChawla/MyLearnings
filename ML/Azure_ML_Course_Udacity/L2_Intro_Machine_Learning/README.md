@@ -2,6 +2,7 @@
 
 - [Introduction to Machine Learning](#introduction-to-machine-learning)
   - [What is Machine Learning?](#what-is-machine-learning)
+  - [Approaches to Machine Learning](#approaches-to-machine-learning)
   - [How Traditional Programming is different from Machine Learning?](#how-traditional-programming-is-different-from-machine-learning)
   - [Applications of Machine Learning](#applications-of-machine-learning)
   - [The historical context of machine learning](#the-historical-context-of-machine-learning)
@@ -28,6 +29,7 @@
   - [Two Perspectives on ML: Computer science vs. Statistical perspective](#two-perspectives-on-ml-computer-science-vs-statistical-perspective)
   - [Machine Learning EcoSystem](#machine-learning-ecosystem)
   - [Models vs Algorithms](#models-vs-algorithms)
+  - [Learning Function](#learning-function)
   - [Linear Regression](#linear-regression)
     - [Simple Linear Regression](#simple-linear-regression)
     - [Linear Regression in Machine Learning](#linear-regression-in-machine-learning)
@@ -36,6 +38,13 @@
       - [The Cost Function](#the-cost-function)
       - [Preparing the Data](#preparing-the-data)
       - [Calculating the Coefficients](#calculating-the-coefficients)
+  - [ML Algorithm Categories: Parametric vs. Non-parametric](#ml-algorithm-categories-parametric-vs-non-parametric)
+    - [Parametric Machine Learning Algorithms](#parametric-machine-learning-algorithms)
+    - [Non-Parametric Machine Learning Algorithms](#non-parametric-machine-learning-algorithms)
+  - [Machine Learning v/s Deep Learning](#machine-learning-vs-deep-learning)
+  - [The Trade-Offs](#the-trade-offs)
+    - [Bias vs. Variance](#bias-vs-variance)
+    - [Overfitting vs. Underfitting](#overfitting-vs-underfitting)
 
 ***
 
@@ -46,6 +55,29 @@ Definition 1: **Machine learning is the science of getting computers to act with
 Definition 2: Machine learning is a data science technique used to extract patterns from data, allowing computers to identify related data, and forecast future outcomes, behaviors, and trends.
 
 Definition 3: A subcategory of artificial intelligence that involves learning from data without being explicitly programmed.
+
+***
+
+## Approaches to Machine Learning
+
+There are three main approaches to machine learning:
+
+- **Supervised learning**: Learns from data that contains both the inputs and expected outputs (e.g., labeled data). Common types are:
+  - **Classification**: Outputs are categorical.
+  - **Regression**: Outputs are continuous and numerical.
+  - **Similarity learning**: Learns from examples using a similarity function that measures how similar two objects are.
+  - **Feature learning**: Learns to automatically discover the representations or features from raw data.
+  - **Anomaly detection**: A special form of classification, which learns from data labeled as normal/abnormal.
+
+- **Unsupervised learning**: Learns from input data only; finds hidden structure in input data.
+  - **Clustering**: Assigns entities to clusters or groups.
+  - **Feature learning**: Features are learned from unlabeled data.
+  - **Anomaly detection**: Learns from unlabeled data, using the assumption that the majority of entities are normal.
+
+- **Reinforcement learning**: Learns how an agent should take action in an environment in order to maximize a reward function.
+  - **Markov decision process**: A mathematical process to model decision-making in situations where outcomes are partly random and partly under the control of a decision-maker. Does not assume knowledge of an exact mathematical model.
+
+<img alt="Approaches to ML" src="assets/images/approaches_to_ML.png" width="800" height="400">
 
 ***
 
@@ -372,6 +404,8 @@ This is the learning part of machine learning; That is, we can learn these value
 
 ***
 
+## Learning Function
+
 Machine learning algorithms aim to learn a target function (f) that describes the mapping between data input variables (X) and an output variable (Y).
 
 `Y=f(X)`
@@ -459,3 +493,70 @@ To get the intercept, we calculate:
 And to get the root mean squared error (RMSE), we have:
 
 ![RMSE](assets/images/rmse.png)
+
+***
+
+## ML Algorithm Categories: Parametric vs. Non-parametric
+
+### Parametric Machine Learning Algorithms
+
+A parametric algorithm has a fixed number of parameters.  A parametric algorithm is computationally faster, but makes stronger assumptions about the data; the algorithm may work well if the assumptions turn out to be correct, but it may perform badly if the assumptions are wrong.  A common example of a parametric algorithm is linear regression.
+
+| Benefits | Limitations |
+| -------- | ----------- |
+| Simpler and easier to understand; easier to interpret the results | Highly constrained to the specified form of the simplified function |
+| Faster when talking about learning from data | Limited complexity of the problems they are suitable for |
+| Less training data required to learn the mapping function, working well even if the fit to data is not perfect | Poor fit in practice, unlikely to match the underlying mapping function. |
+
+### Non-Parametric Machine Learning Algorithms
+
+A non-parametric algorithm uses a flexible number of parameters, and the number of parameters often grows as it learns from more data.  A non-parametric algorithm is computationally slower, but makes fewer assumptions about the data.  A common example of a non-parametric algorithm is K-nearest neighbour.
+
+| Benifits | Limitations |
+| -------- | ----------- |
+| High flexibility, in the sense that they are capable of fitting a large number of functional forms | More training data is required to estimate the mapping function |
+| Power by making weak or no assumptions on the underlying function | Slower to train, generally having far more parameters to train |
+| High performance in the prediction models that are produced | Overfitting the training data is a risk; overfitting makes it harder to explain the resulting predictions |
+
+## Machine Learning v/s Deep Learning
+
+Deep learning algorithms are based on neural networks and the classical ML algorithms are based on classical mathematical algorithms, such as linear regression, logistic regression, decision tree, SVM, and so on.
+
+| Features | Deep Learning | Machine Learning |
+| :--------: | :------------------------ | :--------------------------- |
+| Advantages | Suitable for high complexity problems | More suitable for small data |
+| - | Better accuracy, compared to classical ML | Easier to interpret outcomes |
+| - | Better support for big data | Cheaper to perform |
+| - | Complex features can be learned | Can run on low-end machines |
+| - | | Does not require large computational power |
+| Disadvantages | Difficult to explain trained data | Difficult to learn large datasets |
+| - | Require significant computational power | Require feature engineering |
+| - | | Difficult to learn complex functions |
+
+## The Trade-Offs
+
+> Two of the most important trade-offs are `bias vs. variance` and `overfitting vs. underfitting`.
+
+### Bias vs. Variance
+
+- Bias measures how inaccurate the model prediction is in comparison with the true output.
+
+- Variance measures how much the target function will change if different training data is used.
+
+> The prediction error can be viewed as the sum of model error (error coming from the model) and the irreducible error (coming from data collection).
+
+```text
+prediction error = Bias error + variance + error + irreducible error
+```
+
+- Low bias means fewer assumptions about the target function(KNN and decision trees). In contrast, high bias means more assumptions about the target function(Linear Regression).Having more assumptions can potentially miss important relations between features and outputs and cause underfitting.
+
+- Low variance indicates changes in training data would result in similar target functions. For example, linear regression usually has a low variance. High variance indicates changes in training data would result in very different target functions. For example, support vector machines usually have a high variance. High variance suggests that the algorithm learns the random noise instead of the output and causes overfitting.
+
+### Overfitting vs. Underfitting
+
+- Overfitting refers to the situation in which models fit the training data very well, but fail to generalize to new data.
+
+- Underfitting refers to the situation in which models neither fit the training data nor generalize to new data.
+
+<img alt="Model Performance" src="assets/images/modelperformance.png" width="600" height="100">
