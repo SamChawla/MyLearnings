@@ -30,8 +30,6 @@ You can download and install git using [git-scm](https://git-scm.com/downloads) 
 
 ## Git Commands
 
-***
-
 ### Config Commands
 
 |      Command     |   Description   |    Example   |
@@ -59,13 +57,13 @@ You can download and install git using [git-scm](https://git-scm.com/downloads) 
 
 ## Creating a new repository on github
 
-  1. Go to [Github](http://github.com/)
+  1. Go to [Github](http://github.com/) <br>
   ![Github Home Page](https://user-images.githubusercontent.com/7588716/187735346-20ea7590-35f6-4e20-b6a2-fa438c7bf88d.png)
 
-  2. Click on New
+  2. Click on New <br>
   ![New Icon](https://user-images.githubusercontent.com/7588716/187735900-efd97cc5-2fe9-46d8-ad2a-7a872a93ba5e.png)
 
-  3. Provide a repository name and keep other details as default
+  3. Provide a repository name and keep other details as default<br>
   ![Repo Name](https://user-images.githubusercontent.com/7588716/187737116-2a4ae1a9-21d2-40d5-9543-034f87c2a5dd.png)
 
   4. Your repo name would be like `https://github.com/<Username>/<RepoName>.git`
@@ -102,7 +100,7 @@ You can download and install git using [git-scm](https://git-scm.com/downloads) 
 
 ## Working with Existing Projects
 
-1. Fork Repo
+1. Fork Repo <br>
 ![Fork](https://user-images.githubusercontent.com/7588716/187745723-339b7d1a-b969-46bb-b538-b8769b4b5c73.png)
 
 2. Clone repo and then Set original repo url as Upstream
