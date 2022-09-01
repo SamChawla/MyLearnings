@@ -12,6 +12,10 @@
   - [What are branches?](#what-are-branches)
   - [Working with Existing Projects](#working-with-existing-projects)
     - [Sync your forked repo with the main repo](#sync-your-forked-repo-with-the-main-repo)
+  - [Squash using rebase](#squash-using-rebase)
+  - [Merge v/s Rebase](#merge-vs-rebase)
+  - [Cherry-Picking](#cherry-picking)
+  - [Starring and Following](#starring-and-following)
   - [Common Queries](#common-queries)
   - [Things to Remember](#things-to-remember)
   - [References](#references)
@@ -19,6 +23,9 @@
 ***
 
 ## What is Git and Github?
+
+- **GIT and Github** are not same.
+- Git is a VCS or Version Control System which tracks code changes over a period of time whereas Github is a hosting platform service layered over GIT for tracking code changes but on cloud. Other hosting platforms are Gitlab, Bitbucket, AWS CodeCommit to name a few.
 
 ***
 
@@ -44,7 +51,7 @@ You can download and install git using [git-scm](https://git-scm.com/downloads) 
 |:------------------|:-----------------|:--------------|
 | `git init <directory>` | Create empty Git repo in specified directory, uses current directory if directory not passed | `git init` |
 | `git status` | List staged, unstaged, and untracked files | `git status` |
-| `git add <filename>` | Stage all changes in `filename` for the next commit. (Use . to add all the files) | `git add sample.txt` |
+| `git add <filename>` | Stage all changes in `filename` for the next commit. (Use . to add all the files, `<filename> -p` to add file partially) | `git add sample.txt` |
 | `git commit` | Commit the staged snapshot, open text editor for message (use `-m "message"` to add message)| `git commit -m "sample.txt file added"` |
 | `git log` | Display the entire commit history using the default format (use `--oneline` to display commit history in single line)| `git log` |
 | `git reset <commit>` | Move the current branch tip backward to `commit`, reset the staging area to match, but leave the working directory alone. | `git reset` |
@@ -110,18 +117,56 @@ You can download and install git using [git-scm](https://git-scm.com/downloads) 
 
 4. Do the changes in your repo, add commit, and push your changes.
 
-5. You will see an option, once you push your changes `Compare and Pull Request`
+5. You will see an option, once you push your changes `Compare and Pull Request`<br>
 ![PR](https://user-images.githubusercontent.com/7588716/187747418-0d19ac94-2276-4fd7-8fe6-8f383261a5e9.png)
 
 6. Add Title, description and then click on `Create Pull Request`
 
 ### Sync your forked repo with the main repo
 
+- Fetch all the changes using command: `git fetch --all --prune`
+- Checkout main branch and reset it to main branch of upstream: `git reset --hard upstream/master`
+- Push changes: `git push origin master`
+
 ***
+
+## Squash using rebase
+
+- copy the `commit_sha` and write `git rebase -i <commit_sha>` to interactivaely update it.
+- An editor would open up, use `pick` or `s`(squash) as per your requirement, save and then add updated commit message.
+
+***
+
+## Merge v/s Rebase
+
+- Git Merge is a technique that is used to include the changes from one branch to the other branch and keeps the logs of the branches intact.
+- Git Rebase is similar to git merge, but the logs are modified after merge in this technique. Git rebase was introduced to overcome the limitation of merging, i.e., to make logs of repository history look linear.
+
+ <p align="center">
+  <img src="https://user-images.githubusercontent.com/7588716/187976379-979eba7a-0036-4e32-afee-4f4a15412dcc.png" height="300px" width="600px">
+</p>
+
+***
+
+## Cherry-Picking
+
+- It is used when you want to pick a commit from some other branch to your branch that could be a bug fix or anything else
+  1. Copy the `<commit_sha>` that you want to cherry pick.
+  2. checkout branch on which you want this commit.
+  3. use `git cherry-pick <commit_sha>` to cherry pick that commit. If you want to change commit message, you can use `git cherry-pick --no-commit <commit_sha>` and then commit the message.
+
+***
+
+## Starring and Following
+
+- **GITHUB IS A SOCIAL NETWORK FOR CODERS**
+- You can **Star** the repositories you find interesting to come back to that repo later.
+- You can also **Follow** the people on Github, if you want to track their progress and activities.
 
 ## Common Queries
 
 - [How to revert to the previous commit?](https://stackoverflow.com/questions/4114095/how-do-i-revert-a-git-repository-to-a-previous-commit)
+- [When to use rebase instead of merge?](https://stackoverflow.com/questions/804115/when-do-you-use-git-rebase-instead-of-git-merge)
 
 ***
 
@@ -134,5 +179,9 @@ You can download and install git using [git-scm](https://git-scm.com/downloads) 
 ## References
 
 - [Complete Git and GitHub Tutorial by Kunal Kushwaha](https://youtu.be/apGV9Kg7ics)
+- [Advanced Github Workshop](https://www.youtube.com/watch?v=38xZop53BFA)
 - [Atlassian Git CheatSheet](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet)
+- [Github Cheatsheet](https://education.github.com/git-cheat-sheet-education.pdf)
 - [Learn Git Branching](https://learngitbranching.js.org/)
+- [Writing conventional commits](https://www.conventionalcommits.org/en/v1.0.0/)
+- [Git Merge vs Rebase](https://www.edureka.co/blog/git-rebase-vs-merge/)
