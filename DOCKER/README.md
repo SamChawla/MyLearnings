@@ -1,8 +1,26 @@
-# Things you should know (Helpful but not necessary)
+# Docker
+
+- [Docker](#docker)
+  - [Things you should know (Helpful but not necessary)](#things-you-should-know-helpful-but-not-necessary)
+  - [What Docker Does](#what-docker-does)
+  - [What is a container?](#what-is-a-container)
+  - [Useful Commands](#useful-commands)
+    - [Check if docker is installed properly](#check-if-docker-is-installed-properly)
+    - [Check docker images available](#check-docker-images-available)
+    - [Running Docker](#running-docker)
+    - [Terminal Interactive run](#terminal-interactive-run)
+    - [Check Running Dockers](#check-running-dockers)
+    - [Creating an image from another image](#creating-an-image-from-another-image)
+    - [Attach detached container](#attach-detached-container)
+    - [Check docker logs](#check-docker-logs)
+    - [Killing and removing docker](#killing-and-removing-docker)
+    - [Resource Constraints](#resource-constraints)
+
+## Things you should know (Helpful but not necessary)
 
 - Exposure to command line environment.
 - Basic Networking Knowledge.
-- Bash and Linux scripting experience 
+- Bash and Linux scripting experience
 
 __Docker containers are sealed, self-contained units of software that have everything needed to run a service.__
 
