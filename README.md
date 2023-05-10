@@ -6,10 +6,19 @@ Note: **(Use Crtl+click to open link in a new Tab)**
 
 ***
 
-## [Software Engineering Practices](SoftwareEngineeringPractices/README.md)
+- [MyLearnings](#mylearnings)
+  - [Big Data](#big-data)
+  - [Docker](#docker)
+  - [GIT](#git)
+  - [Machine Learning](#machine-learning)
+  - [Software Engineering Practices](#software-engineering-practices)
+
+## [Big Data](BigData/README.md)
 
 ## [Docker](DOCKER/README.md)
 
+## [GIT](Git/README.md)
+
 ## [Machine Learning](ML/README.md)
 
-## [GIT](Git/README.md)
+## [Software Engineering Practices](SoftwareEngineeringPractices/README.md)
