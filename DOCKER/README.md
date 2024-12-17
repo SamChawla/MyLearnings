@@ -2,8 +2,11 @@
 
 - [Docker](#docker)
   - [Things you should know (Helpful but not necessary)](#things-you-should-know-helpful-but-not-necessary)
+  - [What is Docker?](#what-is-docker)
+  - [Need for Docker](#need-for-docker)
   - [What Docker Does](#what-docker-does)
-  - [What is a container?](#what-is-a-container)
+  - [What are containers?](#what-are-containers)
+  - [Containers vs. Virtual Machines](#containers-vs-virtual-machines)
   - [Useful Commands](#useful-commands)
     - [Check if docker is installed properly](#check-if-docker-is-installed-properly)
     - [Check docker images available](#check-docker-images-available)
@@ -14,7 +17,11 @@
     - [Attach detached container](#attach-detached-container)
     - [Check docker logs](#check-docker-logs)
     - [Killing and removing docker](#killing-and-removing-docker)
+    - [Networks in Docker](#networks-in-docker)
     - [Resource Constraints](#resource-constraints)
+  - [Docker Compose](#docker-compose)
+  - [Docker Swarn](#docker-swarn)
+  - [Docker v/s Kubernetes](#docker-vs-kubernetes)
 
 ## Things you should know (Helpful but not necessary)
 
@@ -24,6 +31,18 @@
 
 __Docker containers are sealed, self-contained units of software that have everything needed to run a service.__
 
+## What is Docker?
+
+## Need for Docker
+
+- Compatibility/Dependency
+- Long setup time
+- Different Dev/Test/Prod environments
+
+Matrix from Hell: so what is the matrix from hell? put simply, it is the challenge of packaging any application, regardless of language/frameworks/dependencies, so that it can run on any cloud, regardless of operating systems/hardware/infrastructure.
+
+docker solved for the matrix from hell by decoupling the application from the underlying operating system and hardware. it did this by packaging all dependencies inside docker containers, including the os. this makes docker containers "portable", i.e. they can run on any cloud or machine without the dreaded "it works on this machine" problems. this is the single biggest reason docker is considered the hottest new technology of the last decade.
+
 ## What Docker Does
 
 - Carves up a computer into sealed containers that run your code.
@@ -31,12 +50,15 @@ __Docker containers are sealed, self-contained units of software that have every
 - Builds these containers for you.
 - Is a social platform for you to find and share containers, which are different from virtual machines.
 
-## What is a container?
+## What are containers?
 
 - It is a self-contained sealed unit of software.
 - Contains everything required to run the code.
 - Includes batteries and OS.
 - __A container includes Code, Configs, Processes, Networking, Dependencies, Minimal Operating System__.
+
+## Containers vs. Virtual Machines
+
 
 ## Useful Commands
 
@@ -104,8 +126,16 @@ $ docker rm <container-name>
 
 ```
 
+### Networks in Docker
+
 ### Resource Constraints
 
 ```bash
 $ docker run --memory <maximum-allowed-memory> <image-name> command
 ```
+
+## Docker Compose
+
+## Docker Swarn
+
+## Docker v/s Kubernetes
